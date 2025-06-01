@@ -1,6 +1,6 @@
 name: Auto Health Report
 
-on: #スケジュール停止するときはここを無効に
+#on: #スケジュール停止するときはここを無効に
   schedule:
     - cron: '0 23 * * *'  # 任意の時間を入力（mm hhの順でUTCで、入力例では0800JSTに実行される）
   workflow_dispatch:
