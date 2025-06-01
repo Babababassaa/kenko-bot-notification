@@ -2,12 +2,13 @@ const puppeteer = require("puppeteer");
 const axios = require("axios");
 
 // 下の三行は自分で入力
-const username = "69209";
-const password = "69209KTni";
-const location = "香取市";
+const username = "あなたのIDをここに入力";
+const password = "あなたのパスワード";
+const location = "あなたの居住地";
 
 //あなたのSlack Webhook URLに置き換え
-const webhookUrl = "https://hooks.slack.com/services/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";
+const webhookUrl = "https://hooks.slack.com/services/YOUR_URL_HERE/EXAMPLE/EXAMPLE/";
+
 
 
 // Slack通知関数
