@@ -38,7 +38,7 @@ Slackの「Incoming Webhook」を使って、スクリプト実行後に自動�
 
 8. script.js 内のURLを手順7でコピーしたものに変更
 
-Set-up が完了したら Actions タブ → auto_health_report →  から手動で動作確認できます。
+Set-up が完了したら  Actions タブ  →  Auto Health report  →  Run workflow  から手動で動作確認できます。
 
 ## 注意事項
 
