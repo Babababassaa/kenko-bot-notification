@@ -47,4 +47,4 @@ URLの取り扱い注意
 
 https://github.com/Syu6432/kenko-bot
 
-↑に詳細説明あり
+上記リンクに詳細説明あり
