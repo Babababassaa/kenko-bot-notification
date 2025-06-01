@@ -30,13 +30,15 @@ Slackの「Incoming Webhook」を使って、スクリプト実行後に自動�
 
 4. 「App Home」  →  「Your App’s Presence in Slack」 を入力
 
-5. 左のメニューから「Incoming Webhooks」→ 「Activate Incoming Webhooks」
+5. 左のメニューから「Incoming Webhooks」 → 「Activate Incoming Webhooks」
 
 6. 「Add New Webhook to Workspace」から送信先チャンネルを選ぶ
 
 7. 表示された Webhook URL（例: https://hooks.slack.com/services/XXXXX/YYYYY/ZZZZZ ）をコピー
 
 8. script.js 内のURLを手順7でコピーしたものに変更
+
+Set-up が完了したら Actions タブ → auto_health_report →  から手動で動作確認できます。
 
 ## 注意事項
 
