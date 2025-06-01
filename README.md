@@ -18,17 +18,19 @@ Slackの「Incoming Webhook」を使って、スクリプト実行後に自動�
 
 1. SlackのApp管理ページ にアクセス　https://api.slack.com/apps
 
-2. 「Create New App」 → 「From Scratch」
+2. 「Create New App」 → 「From Scratch」 →  名前とワークスペースを入力して作成
 
-3. 名前とワークスペースを入力して作成
+3. 「Basic Infomation」  →  「Display Infomation」 を入力
 
-4. 左のメニューから「Incoming Webhooks」→ 「Activate Incoming Webhooks」
+4. 「App Home」  →  「Your App’s Presence in Slack」 を入力
 
-5. 「Add New Webhook to Workspace」から送信先チャンネルを選ぶ
+5. 左のメニューから「Incoming Webhooks」→ 「Activate Incoming Webhooks」
 
-6. 表示された Webhook URL（例: 'https://hooks.slack.com/services/XXXXX/YYYYY/ZZZZZ'）をコピー
+6. 「Add New Webhook to Workspace」から送信先チャンネルを選ぶ
 
-7. script.js 内のURLを手順6でコピーしたものに変更
+7. 表示された Webhook URL（例: 'https://hooks.slack.com/services/XXXXX/YYYYY/ZZZZZ'）をコピー
+
+8. script.js 内のURLを手順6でコピーしたものに変更
 
 ## 注意事項
 
