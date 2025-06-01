@@ -40,6 +40,8 @@ Slackの「Incoming Webhook」を使って、スクリプト実行後に自動�
 
 Set-up が完了したら  Actions タブ  →  Auto Health report  →  Run workflow  から手動で動作確認できます。
 
+.ymlファイル内の3行目の#を外すのを忘れないよう注意。
+
 ## 注意事項
 
 Slack通知のため、通知無しのバージョンとは異なるモジュールを使用します。".github/workflows
