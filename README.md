@@ -46,3 +46,5 @@ URLの取り扱い注意
 ### 通知無しバージョンはこちら
 
 https://github.com/Syu6432/kenko-bot
+
+↑に詳細説明あり
