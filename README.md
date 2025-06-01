@@ -30,7 +30,7 @@ Slackの「Incoming Webhook」を使って、スクリプト実行後に自動�
 
 7. 表示された Webhook URL（例: https://hooks.slack.com/services/XXXXX/YYYYY/ZZZZZ ）をコピー
 
-8. script.js 内のURLを手順6でコピーしたものに変更
+8. script.js 内のURLを手順8でコピーしたものに変更
 
 ## 注意事項
 
