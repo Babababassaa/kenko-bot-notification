@@ -1,13 +1,14 @@
 const puppeteer = require("puppeteer");
+const { DateTime } = require("luxon");
 const axios = require("axios");
 
 // 下の三行は自分で入力
-const username = "あなたのIDをここに入力";
-const password = "あなたのパスワード";
-const location = "あなたの居住地";
+const username = "あなたのIDをここに入力(半角)";
+const password = "あなたのパスワード(半角)";
+const location = "あなたの居住地(全角or半角)";
 
 //あなたのSlack Webhook URLに置き換え
-const webhookUrl = "https://hooks.slack.com/services/YOUR_URL_HERE/EXAMPLE/EXAMPLE/";
+const webhookUrl = "https://hooks.slack.com/services/YOUR_URL_HERE/EXAMPLE/EXAMPLE";
 
 
 
@@ -46,6 +47,19 @@ try {
 　const inputButton = await page.$("#k01Button");
 　await inputButton.evaluate(el => el.scrollIntoView({ behavior: "auto", block: "center" }));
 　await inputButton.click();
+
+  // JSTの日付を取得
+  const jstDate = DateTime.now().setZone("Asia/Tokyo");
+  const formattedDate = jstDate.toISODate();
+
+  // 日付入力欄に今日の日付を入力（形式: yyyy-mm-dd）
+  await page.evaluate((date) => {
+    const dateInput = document.querySelector('#nichiji');
+    if (dateInput) {
+      dateInput.value = date;
+      dateInput.dispatchEvent(new Event("input", { bubbles: true }));
+    }
+  }, formattedDate);
   
   // '体温計測あり'を選択
   await page.click('input[name="toi0"][value="1"]');
@@ -60,10 +74,9 @@ try {
 
     const temp2 = document.querySelector("#temp2");
     temp2.value = decimalPart;
-    temp2.dispatchEvent(new Event("input", { bubbles: true })); //これがイベント発火
+    temp2.dispatchEvent(new Event("input", { bubbles: true }));
   }, intPart, decimalPart);
 
-  
   // 居住地入力（inputイベント発火付き）
   await page.evaluate((location) => {
     const tf2 = document.querySelector("#tf2");
