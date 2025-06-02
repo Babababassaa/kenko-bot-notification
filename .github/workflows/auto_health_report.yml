@@ -18,7 +18,7 @@ jobs:
       with:
         node-version: '20'
         
-    - name: Install Puppeteer, Axios and deps
+    - name: Install Puppeteer, luxon, Axios and deps
       run: |
         sudo apt-get update
         sudo apt-get install -y \
@@ -26,7 +26,7 @@ jobs:
           libatk-bridge2.0-0 \
           libxss1 \
           libasound2t64
-        npm install axios puppeteer
+        npm install axios luxon puppeteer
         
-    - name: script.jsを実行
+    - name: Run Bot
       run: node script.js
